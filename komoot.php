@@ -4,7 +4,7 @@
 	Plugin URI: http://www.komoot.de/
 	Description: Mit komoot for Wordpress kannst du Wanderungen, Mountainbike- oder Fahrradtouren ganz einfach  als Karte, &Uuml;bersichtskarte oder Liste in deinen Blog einbinden.
 	Author: komoot GmbH
-	Version: 0.1
+	Version: 0.2
 	Author URI: http://www.komoot.de
 	License: GPLv2 or later
 */
@@ -37,9 +37,9 @@ include_once dirname( __FILE__ ) . '/komoot-tourlist-widget.php';
 */
 
 function komoot_replace($matches) {
-	
+
 	//Get URL and Parameters
-	preg_match_all("#komoot\.de/c/(.*)[\s|\]]#isU",$matches[0], $url);
+	preg_match_all("#komoot\.de/c/(.*)[\s|\]|\"|\']#isU",$matches[0], $url);
 	preg_match_all("#width=[\'|\"]?([0-9]+%?)[\'|\"]?#is",$matches[0], $temp_width);
 	preg_match_all("#height=[\'|\"]?([0-9]*%?)[\'|\"]?#is",$matches[0],$temp_height);
 	
@@ -47,8 +47,8 @@ function komoot_replace($matches) {
 	if (preg_match("#[0-9]$#", $url[1][0])==0 && preg_match("#.*\/$#", $url[1][0])==0){
 		$url [1][0] = $url[1][0] . '/'; 
 	}
-
-	//Bild SRC
+	
+	//Create SRC
 	$src = 'http://www.komoot.de/c/' . $url[1][0]. '?embed';
 	
 	//If width & hight is not set use default
@@ -66,7 +66,7 @@ function komoot_replace($matches) {
 	}
 	
 	//Return iFrame
-	return '<iframe width="'.$width.'" height="'.$height.'" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="'.$src.'"><a title="Mountainbike Touren Fahrradtouren Wanderungen" href="'.$src.'">Klicke hier, um die Wanderung, Mountianbike Tour oder Fahrradtour auf dein iPhone, Anroid Outdoor GPS-Gerät zu laden</a></iframe>';
+	return '<iframe width="'.$width.'" height="'.$height.'" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="'.$src.'&utm_source=WP-Plugin&utm_medium=referral&utm_campaign=360-Grad"><a title="Mountainbike Touren Fahrradtouren Wanderungen" href="'.$src.'&utm_source=WP-Plugin&utm_medium=referral&utm_campaign=360-Grad">Klicke hier, um die Wanderung, Mountianbike Tour oder Fahrradtour auf dein iPhone, Anroid Outdoor GPS-Gerät zu laden</a></iframe>';
 	
 }
 
