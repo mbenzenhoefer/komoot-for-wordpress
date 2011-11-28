@@ -4,7 +4,7 @@
 	Plugin URI: http://www.komoot.de/
 	Description: Mit komoot for Wordpress kannst du Wanderungen, Mountainbike- oder Fahrradtouren ganz einfach  als Karte, &Uuml;bersichtskarte oder Liste in deinen Blog einbinden.
 	Author: komoot GmbH
-	Version: 0.2
+	Version: 1.0
 	Author URI: http://www.komoot.de
 	License: GPLv2 or later
 */
@@ -66,8 +66,7 @@ function komoot_replace($matches) {
 	}
 	
 	//Return iFrame
-	return '<iframe width="'.$width.'" height="'.$height.'" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="'.$src.'"><a title="Mountainbike Touren Fahrradtouren Wanderungen" href="'.$src.'">Klicke hier, um die Wanderung, Mountianbike Tour oder Fahrradtour auf dein iPhone, Anroid Outdoor GPS-Gerät zu laden</a></iframe>';
-	
+	return '<iframe width="'.$width.'" height="'.$height.'" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="'.$src.'"><a title="Mountainbike Touren Fahrradtouren Wanderungen" href="'.$src.'">Klicke hier, um die Wanderung, Mountianbike Tour oder Fahrradtour auf dein iPhone, Anroid Outdoor GPS-Gerät zu laden</a></iframe>';	
 }
 
 function komoot_iframe_parser($content) {
