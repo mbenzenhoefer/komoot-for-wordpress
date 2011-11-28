@@ -4,7 +4,7 @@
 	Plugin URI: http://www.komoot.de/
 	Description: Mit diesem Widget kannst du deine komoot Touren als Liste in der Seitenleiste deines Blogs anzeigen.
 	Author: komoot GmbH
-	Version: 0.1
+	Version: 1.0
 	Author URI: http://www.komoot.de
 	License: GPLv2 or later
 */
