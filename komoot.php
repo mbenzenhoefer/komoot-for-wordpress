@@ -66,8 +66,7 @@ function komoot_replace($matches) {
 	}
 	
 	//Return iFrame
-	return '<iframe width="'.$width.'" height="'.$height.'" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="'.$src.'&utm_source=WP-Plugin&utm_medium=referral&utm_campaign=360-Grad"><a title="Mountainbike Touren Fahrradtouren Wanderungen" href="'.$src.'&utm_source=WP-Plugin&utm_medium=referral&utm_campaign=360-Grad">Klicke hier, um die Wanderung, Mountianbike Tour oder Fahrradtour auf dein iPhone, Anroid Outdoor GPS-Gerät zu laden</a></iframe>';
-	
+	return '<iframe width="'.$width.'" height="'.$height.'" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="'.$src.'"><a title="Mountainbike Touren Fahrradtouren Wanderungen" href="'.$src.'">Klicke hier, um die Wanderung, Mountianbike Tour oder Fahrradtour auf dein iPhone, Anroid Outdoor GPS-Gerät zu laden</a></iframe>';	
 }
 
 function komoot_iframe_parser($content) {
