@@ -36,7 +36,7 @@ function komoot_replace($matches) {
 	preg_match_all("#height=[\'|\"]?([0-9]*%?)[\'|\"]?#is",$matches[0],$temp_height);
 	
 	//Create SRC
-	$src = 'http://www.komoot.de/'.$path[1][0];
+	$src = 'https://www.komoot.de/'.$path[1][0];
 	
 	//If width & hight is not set use default
 	if ($temp_width[1][0]==0){
