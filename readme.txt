@@ -33,7 +33,7 @@ http://www.komoot.de/kontakt
 * Als Link maskierte Shortcodes werden ebenfalls verarbeitet
 = 2.0 =
 * Die neuen Links auf www.komoot.de werden unterstützt
-= 2.0.1 0
+= 2.0.1 =
 * Fix URL to use https preventing "Mixed Content" error in Chrome
 
 
