@@ -4,7 +4,7 @@ Tags: karte, outdoor, mountainbike, wandern, fahrrad, gps, gpx, tour, iphone, an
 Requires at least: 3.0
 Tested up to: 3.4
 License: GPLv2 or later
-Stable tag: 2.0
+Stable tag: 2.0.1
 
 Mit komoot for Wordpress kannst du Wanderungen, Mountainbike- oder Fahrradtouren ganz einfach  als Karte in deinen Blog einbinden.
 
@@ -33,5 +33,7 @@ http://www.komoot.de/kontakt
 * Als Link maskierte Shortcodes werden ebenfalls verarbeitet
 = 2.0 =
 * Die neuen Links auf www.komoot.de werden unterstützt
+= 2.0.1 0
+* Fix URL to use https preventing "Mixed Content" error in Chrome
 
 
